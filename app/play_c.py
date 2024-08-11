@@ -21,7 +21,7 @@ def make_video():
             return
 
         height, width, layers = frame.shape
-        video = cv2.VideoWriter(video_name, cv2.VideoWriter_fourcc(*'DIVX'), 40, (width, height))
+        video = cv2.VideoWriter(video_name, cv2.VideoWriter_fourcc(*'DIVX'), 30, (width, height))
 
         for image in images:
             frame = cv2.imread(os.path.join(image_folder, image))
